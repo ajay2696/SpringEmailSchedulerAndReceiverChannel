@@ -1,0 +1,13 @@
+package com.example.EmailSchedular.payload;
+
+import java.time.LocalDateTime;
+
+public class ScheduleEmailRequest {
+	
+	private String email;
+	private String subject;
+	private String body;
+	private LocalDateTime dateTime;
+
+
+}

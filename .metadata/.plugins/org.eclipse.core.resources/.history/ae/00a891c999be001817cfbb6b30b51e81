@@ -1,0 +1,26 @@
+package com.example.EmailSchedular.payload;
+
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+
+import javax.validation.constraints.NotNull;
+
+public class ScheduleEmailRequest {
+	
+	@NotNull
+	private String email;
+	
+	@NotNull
+	private String subject;
+	
+	@NotNull
+	private String body;
+	
+	@NotNull
+	private LocalDateTime dateTime;
+	
+	@NotNull
+	private ZoneId timeZone;
+
+
+}

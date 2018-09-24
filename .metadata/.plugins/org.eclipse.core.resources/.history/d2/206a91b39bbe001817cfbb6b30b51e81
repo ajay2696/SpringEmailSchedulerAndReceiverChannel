@@ -1,0 +1,20 @@
+package com.example.EmailSchedular.controller;
+
+import org.quartz.Scheduler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmailJobSchedulerController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(EmailJobSchedulerController.class);
+	
+	@Autowired
+	private Scheduler scheduler;
+	
+	
+	
+
+}

@@ -1,0 +1,6 @@
+package com.example.EmailSchedular.payload;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ScheduleEmailResponse {
+
+}

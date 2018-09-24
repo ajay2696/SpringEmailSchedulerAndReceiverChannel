@@ -1,0 +1,44 @@
+package com.example.EmailSchedular.controller;
+
+import javax.validation.Valid;
+
+import org.quartz.JobDataMap;
+import org.quartz.JobDetail;
+import org.quartz.Scheduler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.EmailSchedular.payload.ScheduleEmailRequest;
+import com.example.EmailSchedular.payload.ScheduleEmailResponse;
+
+@RestController
+public class EmailJobSchedulerController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(EmailJobSchedulerController.class);
+	
+	@Autowired
+	private Scheduler scheduler;
+	
+	public ResponseEntity<ScheduleEmailResponse> scheduleEmail(@Valid @RequestBody ScheduleEmailRequest scheduleEmailRequest){
+		
+		return null;
+		
+	}
+	
+	private JobDetail buildJobDetail(ScheduleEmailRequest scheduleEmailRequest) {
+		JobDataMap jobDataMap = new JobDataMap();
+		
+		jobDataMap.put("email", scheduleEmailRequest.getEmail());
+		jobDataMap.put("subject", scheduleEmailRequest.getSubject());
+		jobDataMap.put("body", scheduleEmailRequest.getBody());
+		
+		return null;
+		
+	}
+	
+
+}

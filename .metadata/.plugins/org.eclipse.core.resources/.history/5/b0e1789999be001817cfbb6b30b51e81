@@ -1,0 +1,5 @@
+package com.example.EmailSchedular.payload;
+
+public class ScheduleEmailRequest {
+
+}

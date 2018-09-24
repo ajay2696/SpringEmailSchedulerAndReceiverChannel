@@ -1,0 +1,8 @@
+package com.example.EmailSchedular.job;
+
+import org.springframework.scheduling.quartz.QuartzJobBean;
+
+public class EmailJob extends QuartzJobBean{
+	
+
+}

@@ -1,0 +1,13 @@
+package com.example.EmailSchedular.payload;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ScheduleEmailResponse {
+	
+	private boolean success;
+	private String jobId;
+	private String jobGroup;
+	private String message;
+
+}
